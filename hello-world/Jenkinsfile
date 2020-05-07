@@ -10,13 +10,13 @@ pipeline {
 
         stage("Build") {
             steps {
-                sh "cd hello-world &&  chmod +x gradlew && ./gradlew build && cd .. && pwd && ls "
+                sh "cd hello-world && chmod +x gradlew && ./gradlew build"
             }
         }
 
         stage("Docker Push") {
             steps {
-                sh "pwd && ls && sudo docker build -t devops-jenkins:latest . && sudo docker tag devops-jenkins:latest tiagobm564/devops-jenkins:latest && sudo docker login --username ${DOCKER_USER} --password ${DOCKER_PWD} && sudo docker push tiagobm564/devops-jenkins:latest"
+                sh "sudo docker build -t devops-jenkins:latest . && sudo docker tag devops-jenkins:latest tiagobm564/devops-jenkins:latest && sudo docker login --username ${DOCKER_USER} --password ${DOCKER_PWD} && sudo docker push tiagobm564/devops-jenkins:latest"
             }
         }
 
