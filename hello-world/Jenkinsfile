@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+    stages {
+
+        stage('Download sources'){
+            steps{
+             	checkout scm
+            }
+        }
+
+        stage("Build") {
+            steps {
+                sh "cd hello-world &&  chmod +x gradlew && ./gradlew build && cd .. && pwd && ls "
+            }
+        }
+
+        stage("Docker Push") {
+            steps {
+                sh "pwd && ls && sudo docker build -t devops-jenkins:latest . && sudo docker tag devops-jenkins:latest tiagobm564/devops-jenkins:latest && sudo docker login --username ${DOCKER_USER} --password ${DOCKER_PWD} && sudo docker push tiagobm564/devops-jenkins:latest"
+            }
+        }
+
+        stage("Docker Run") {
+                steps {
+                  script {
+                     sshagent(credentials : ['ec2-poc.pem']) {
+                        sh "echo Connecting to the remote server"
+                        sh '''ssh -t -t ubuntu@ec2-${REMOTE_HOST}.compute-1.amazonaws.com -o StrictHostKeyChecking=no << EOF
+                        #!/bin/bash
+                        echo Connected to HelloWorld-App
+                        echo Stopping container
+                        sudo docker stop -t 0 \\$(sudo docker ps -q)
+                        sudo docker container prune --force
+                        echo Removing image
+                        sudo docker rmi tiagobm564/devops-jenkins:latest
+                        sudo docker run -d -p 80:9090 tiagobm564/devops-jenkins:latest
+                        echo Hello-World Application Runnig!!!
+                        exit
+                        EOF'''
+                    }
+                 }
+                  }
+              }
+
+       }
+	post {
+		always {
+        	cleanWs()
+    	}
+	}
+}
