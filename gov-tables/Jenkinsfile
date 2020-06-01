@@ -1,0 +1,50 @@
+pipeline {
+   agent any
+    stages {
+
+        stage('Download sources'){
+            steps{
+                checkout scm
+            }
+        }
+
+        stage("Build") {
+            steps {
+                sh "cd gov-tables && chmod +x gradlew && ./gradlew build"
+            }
+        }
+
+        stage("Docker Push") {
+            steps {
+                sh "cd gov-tables && sudo docker build -t devops-gov-tables:latest . && sudo docker tag devops-gov-tables:latest tiagobm564/devops-gov-tables:latest && sudo docker login --username ${DOCKER_USER} --password ${DOCKER_PWD} && sudo docker push tiagobm564/devops-gov-tables:latest"
+            }
+        }
+
+        stage("Docker Run") {
+            steps {
+                script {
+                    sshagent(credentials : ['ec2-poc.pem']) {
+                        sh "echo Connecting to the remote server"
+                        sh '''ssh -t -t ubuntu@ec2-${REMOTE_HOST}.compute-1.amazonaws.com -o StrictHostKeyChecking=no << EOF
+                        #!/bin/bash
+                        echo Connected to Gov-tables-App
+                        echo Stopping container
+                        sudo docker stop -t 0 \\$(sudo docker ps -q)
+                        sudo docker container prune --force
+                        echo Removing image
+                        sudo docker rmi tiagobm564/devops-gov-tables:latest
+                        sudo docker run -d -p 80:8080 tiagobm564/devops-gov-tables:latest
+                        echo Gov Tables Application Runnig!!!
+                        exit
+                        EOF'''
+                    }
+                }
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
