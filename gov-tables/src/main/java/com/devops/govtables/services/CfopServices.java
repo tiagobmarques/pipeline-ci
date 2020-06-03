@@ -338,8 +338,8 @@ public class CfopServices {
         cfops.add(new Cfop(3949,"Outra entrada de mercadoria ou prestação de serviço não especificado","Analítico"));
         cfops.add(new Cfop(5000,"SAÍDAS OU PRESTAÇÕES DE SERVIÇOS PARA O ESTADO","Sintético"));
         cfops.add(new Cfop(5100,"VENDAS DE PRODUÇÃO PRÓPRIA OU DE TERCEIROS","Sintético"));
-        cfops.add(new Cfop(5101,"Venda de produçãoo do estabelecimento","Analítico"));
-        cfops.add(new Cfop(5102,"Venda de mercadoria adquirida ou recebida de terceiros","Analítico"));
+        cfops.add(new Cfop(5101,"Venda de produção do estabelecimento","Analítico"));
+        cfops.add(new Cfop(5102,"Venda de mercadoriaa adquirida ou recebida de terceiros","Analítico"));
         cfops.add(new Cfop(5103,"Venda de produção do estabelecimento, efetuada fora do estabelecimento","Analítico"));
         cfops.add(new Cfop(5104,"Venda de mercadoria adquirida ou recebida de terceiros, efetuada fora do estabelecimento","Analítico"));
         cfops.add(new Cfop(5105,"Venda de produção do estabelecimento que não deva por ele transitar","Analítico"));
