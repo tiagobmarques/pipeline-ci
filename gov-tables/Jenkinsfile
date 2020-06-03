@@ -14,6 +14,12 @@ pipeline {
             }
         }
 
+        stage("BDD validation") {
+            steps {
+                sh "cd gov-tables && ./gradlew cucumber"
+            }
+        }
+
         stage("Docker Push") {
             steps {
                 sh "cd gov-tables && sudo docker build -t devops-gov-tables:latest . && sudo docker tag devops-gov-tables:latest tiagobm564/devops-gov-tables:latest && sudo docker login --username ${DOCKER_USER} --password ${DOCKER_PWD} && sudo docker push tiagobm564/devops-gov-tables:latest"
