@@ -8,15 +8,9 @@ pipeline {
             }
         }
 
-        stage("Build") {
+        stage("Build and BDD Validation") {
             steps {
                 sh "cd gov-tables && chmod +x gradlew && ./gradlew build"
-            }
-        }
-
-        stage("BDD validation") {
-            steps {
-                sh "cd gov-tables && ./gradlew cucumber"
             }
         }
 
