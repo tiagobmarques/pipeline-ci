@@ -6,6 +6,11 @@ Funcionalidade: Consulta de CFOP'S
     Quando Eu solicitar a listagem destas CFOP's
     Então Eu devo ter um total de 692 cfops
 
+#  Cenário: Busca de um CFOP inexistente
+#    Dado que eu busco por uma CFOP inválida 5217
+#    Quando Eu solicitar a busca desta CFOP
+#    Então Eu devo retornar que a CFOP não existe
+
   Delineação do Cenário: Pesquisar uma CFOP pelo código
     Dado que eu tenha um <cfop>
     Quando Eu solicitar a listagem destas CFOP's

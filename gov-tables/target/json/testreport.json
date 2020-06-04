@@ -1,0 +1,414 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-04T02:59:29.256Z",
+        "line": 4,
+        "name": "Ver a quantidade de CFOP cadastradas",
+        "description": "",
+        "id": "consulta-de-cfop-s;ver-a-quantidade-de-cfop-cadastradas",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 1998200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que eu quero uma listagem de CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.que_eu_quero_uma_listagem_de_CFOP_s()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1000200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 4000700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Eu devo ter um total de 692 cfops",
+            "match": {
+              "arguments": [
+                {
+                  "val": "692",
+                  "offset": 24
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_um_total_de_cfops(java.lang.Integer)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-04T02:59:29.345Z",
+        "line": 21,
+        "name": "Pesquisar uma CFOP pelo código",
+        "description": "",
+        "id": "consulta-de-cfop-s;pesquisar-uma-cfop-pelo-código;;2",
+        "type": "scenario",
+        "keyword": "Delineação do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que eu tenha um 1102",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1102",
+                  "offset": 16
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.que_eu_tenha_um(java.lang.Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Eu devo ter como retorno a \"Compra para comercialização\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Compra para comercialização\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_como_retorno_a(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-04T02:59:29.357Z",
+        "line": 22,
+        "name": "Pesquisar uma CFOP pelo código",
+        "description": "",
+        "id": "consulta-de-cfop-s;pesquisar-uma-cfop-pelo-código;;3",
+        "type": "scenario",
+        "keyword": "Delineação do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 998900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que eu tenha um 2151",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2151",
+                  "offset": 16
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.que_eu_tenha_um(java.lang.Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 998800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Eu devo ter como retorno a \"Transferência para industrialização\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Transferência para industrialização\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_como_retorno_a(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-04T02:59:29.363Z",
+        "line": 23,
+        "name": "Pesquisar uma CFOP pelo código",
+        "description": "",
+        "id": "consulta-de-cfop-s;pesquisar-uma-cfop-pelo-código;;4",
+        "type": "scenario",
+        "keyword": "Delineação do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que eu tenha um 3251",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3251",
+                  "offset": 16
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.que_eu_tenha_um(java.lang.Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Eu devo ter como retorno a \"Compra de energia elétrica para distribuição ou comercialização\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Compra de energia elétrica para distribuição ou comercialização\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_como_retorno_a(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-04T02:59:29.368Z",
+        "line": 24,
+        "name": "Pesquisar uma CFOP pelo código",
+        "description": "",
+        "id": "consulta-de-cfop-s;pesquisar-uma-cfop-pelo-código;;5",
+        "type": "scenario",
+        "keyword": "Delineação do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 998500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que eu tenha um 5102",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5102",
+                  "offset": 16
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.que_eu_tenha_um(java.lang.Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 998900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Eu devo ter como retorno a \"Venda de mercadoria adquirida ou recebida de terceiros\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venda de mercadoria adquirida ou recebida de terceiros\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_como_retorno_a(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-04T02:59:29.374Z",
+        "line": 25,
+        "name": "Pesquisar uma CFOP pelo código",
+        "description": "",
+        "id": "consulta-de-cfop-s;pesquisar-uma-cfop-pelo-código;;6",
+        "type": "scenario",
+        "keyword": "Delineação do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que eu tenha um 6101",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6101",
+                  "offset": 16
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.que_eu_tenha_um(java.lang.Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1000400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Eu devo ter como retorno a \"Venda de produção do estabelecimento\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venda de produção do estabelecimento\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_como_retorno_a(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-04T02:59:29.378Z",
+        "line": 26,
+        "name": "Pesquisar uma CFOP pelo código",
+        "description": "",
+        "id": "consulta-de-cfop-s;pesquisar-uma-cfop-pelo-código;;7",
+        "type": "scenario",
+        "keyword": "Delineação do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que eu tenha um 7101",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7101",
+                  "offset": 16
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.que_eu_tenha_um(java.lang.Integer)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1000200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Eu solicitar a listagem destas CFOP\u0027s",
+            "match": {
+              "location": "com.devops.govtables.CfopTest.eu_solicitar_a_listagem_destas_CFOP_s()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 998200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Eu devo ter como retorno a \"Venda de produção do estabelecimento\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venda de produção do estabelecimento\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.devops.govtables.CfopTest.eu_devo_ter_como_retorno_a(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ]
+      }
+    ],
+    "name": "Consulta de CFOP\u0027S",
+    "description": "",
+    "id": "consulta-de-cfop-s",
+    "keyword": "Funcionalidade",
+    "uri": "classpath:features/cfop.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="0.261">
+    <testcase classname="Consulta de CFOP'S" name="Ver a quantidade de CFOP cadastradas" time="0.084">
+        <system-out>
+            <![CDATA[Dado que eu quero uma listagem de CFOP's....................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter um total de 692 cfops.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Consulta de CFOP'S" name="Pesquisar uma CFOP pelo código" time="0.008">
+        <system-out>
+            <![CDATA[Dado que eu tenha um 1102...................................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter como retorno a "Compra para comercialização"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Consulta de CFOP'S" name="Pesquisar uma CFOP pelo código 2" time="0.003">
+        <system-out>
+            <![CDATA[Dado que eu tenha um 2151...................................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter como retorno a "Transferência para industrialização"......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Consulta de CFOP'S" name="Pesquisar uma CFOP pelo código 3" time="0.002">
+        <system-out>
+            <![CDATA[Dado que eu tenha um 3251...................................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter como retorno a "Compra de energia elétrica para distribuição ou comercialização".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Consulta de CFOP'S" name="Pesquisar uma CFOP pelo código 4" time="0.003">
+        <system-out>
+            <![CDATA[Dado que eu tenha um 5102...................................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter como retorno a "Venda de mercadoria adquirida ou recebida de terceiros".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Consulta de CFOP'S" name="Pesquisar uma CFOP pelo código 5" time="0.002">
+        <system-out>
+            <![CDATA[Dado que eu tenha um 6101...................................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter como retorno a "Venda de produção do estabelecimento".....passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Consulta de CFOP'S" name="Pesquisar uma CFOP pelo código 6" time="0.003">
+        <system-out>
+            <![CDATA[Dado que eu tenha um 7101...................................................passed
+Quando Eu solicitar a listagem destas CFOP's................................passed
+Então Eu devo ter como retorno a "Venda de produção do estabelecimento".....passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
