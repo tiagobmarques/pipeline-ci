@@ -13,7 +13,7 @@ Funcionalidade: Consulta de CFOP'S
 
     Exemplos:
       |cfop       |descricao                                                          |
-      |1102       |"Compra para comercialização1"                                      |
+      |1102       |"Compra para comercialização"                                      |
       |2151       |"Transferência para industrialização"                              |
       |3251       |"Compra de energia elétrica para distribuição ou comercialização"  |
       |5102       |"Venda de mercadoria adquirida ou recebida de terceiros"           |
