@@ -1,16 +1,25 @@
 package com.devops.govtables;
 
 import com.devops.govtables.services.CfopServices;
+import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Rule;
+import org.junit.runner.Result;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.junit.Assert.assertTrue;
 
 public class CfopTest {
 
     private Integer cfop;
     private CfopServices cfopServices;
+    @Rule
+    public WireMockRule wireMockRule = new WireMockRule(8089);
 
     // Scenario 1 - See the CFOP counting
     @Given("que eu tenha um {int}")
