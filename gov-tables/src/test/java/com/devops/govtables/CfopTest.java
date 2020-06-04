@@ -45,7 +45,6 @@ public class CfopTest {
     // Scenario 3 - Search a invalid CFOP
     @Given("que eu busco por uma CFOP inválida {int}")
     public void que_eu_busco_por_uma_CFOP_inválida(Integer cfop) {
-//        this.cfop = cfop;
         this.cfop = cfop;
     }
 
