@@ -43,18 +43,18 @@ public class CfopTest {
     }
 
     // Scenario 3 - Search a invalid CFOP
-//    @Given("que eu busco por uma CFOP inválida {int}")
-//    public void que_eu_busco_por_uma_CFOP_inválida(Integer cfop) {
-//        this.cfop = cfop;
-//    }
-//
-//    @When("Eu solicitar a busca desta CFOP")
-//    public void eu_solicitar_a_busca_desta_CFOP() {
-//        cfopServices = new CfopServices();
-//    }
-//
-//    @Then("Eu devo retornar que a CFOP não existe")
-//    public void eu_devo_retornar_que_a_CFOP_não_existe() {
-//        assertTrue(cfopServices.getCfop(cfop).getCode().equals(Integer.parseInt("0")));
-//    }
+    @Given("que eu busco por uma CFOP inválida {int}")
+    public void que_eu_busco_por_uma_CFOP_inválida(Integer cfop) {
+        this.cfop = cfop;
+    }
+
+    @When("Eu solicitar a busca desta CFOP")
+    public void eu_solicitar_a_busca_desta_CFOP() {
+        cfopServices = new CfopServices();
+    }
+
+    @Then("Eu devo retornar que a CFOP não existe")
+    public void eu_devo_retornar_que_a_CFOP_não_existe() {
+        assertTrue(cfopServices.getCfop(cfop).getCode().equals(Integer.parseInt("0")));
+    }
 }
